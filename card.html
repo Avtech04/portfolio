@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #111;
+        }
+        .achi{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+        .achi .box{
+            position: relative;
+            width: 320px;
+            height: 400px;
+            color: white;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 30px;
+            transition: 0.5s;
+        }
+        .achi .box:hover{
+            transform: translateY(-20px);
+        }
+        .achi .box::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,#ffbc00,#ff0058);
+        }
+        .achi .box::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,#ffbc00,#ff0058);
+            filter: blur(30px);
+        }
+
+        .achi .box:nth-child(2)::before,
+        .achi .box:nth-child(2)::after{
+            background: linear-gradient(315deg,#03a9f4,#ff0058);
+        }
+        
+        .achi .box:nth-child(3)::before,
+        .achi .box:nth-child(3)::after{
+            background: linear-gradient(315deg,#4dff03,#00d0ff);
+        }
+
+        .achi .box span{
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            background: rgba(0,0,0,0.6);
+            z-index: 2;
+        }
+
+        .achi .box span::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            pointer-events: none;
+        }
+        .achi .box .context{
+            position: relative;
+            z-index: 10;
+            padding: 20px 40px;
+        }
+        .achi .box .context h2{
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .achi .box .context p{
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.4em;
+        }
+        .achi .box .context a{
+            display: inline-block;
+            font-size: 1.1em;
+            color: #111;
+            background: white;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="achi">
+        <div class="box">
+            <span> </span>
+            <div class="context">
+                <h2>card one</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus inventore nam sapiente cumque dolores. Aliquid quam ex illo ut, a voluptas quidem maiores odit quo, aspernatur deleniti voluptate incidunt animi?</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <span> </span>
+            <div class="context">
+                <h2>card two</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus inventore nam sapiente cumque dolores. Aliquid quam ex illo ut, a voluptas quidem maiores odit quo, aspernatur deleniti voluptate incidunt animi?</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <span> </span>
+            <div class="context">
+                <h2>card threee</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus inventore nam sapiente cumque dolores. Aliquid quam ex illo ut, a voluptas quidem maiores odit quo, aspernatur deleniti voluptate incidunt animi?</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <span> </span>
+            <div class="context">
+                <h2>card threee</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus inventore nam sapiente cumque dolores. Aliquid quam ex illo ut, a voluptas quidem maiores odit quo, aspernatur deleniti voluptate incidunt animi?</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <span> </span>
+            <div class="context">
+                <h2>card threee</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus inventore nam sapiente cumque dolores. Aliquid quam ex illo ut, a voluptas quidem maiores odit quo, aspernatur deleniti voluptate incidunt animi?</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <span> </span>
+            <div class="context">
+                <h2>card threee</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus inventore nam sapiente cumque dolores. Aliquid quam ex illo ut, a voluptas quidem maiores odit quo, aspernatur deleniti voluptate incidunt animi?</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

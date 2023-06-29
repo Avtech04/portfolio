@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.1/mo.min.js"></script>
+  <script>
+    // var typed = new Typed('#element', {
+    //   strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+    //   typeSpeed: 50,
+    // });
+
+
+    // mo.js
+
+var shape2 = new mojs.Shape({
+  shape : 'polygon',
+  points:       4,
+  radius : 60,
+  left:'50 %',
+  
+  isShowStart : true,
+  fill: {'#bf3030':'#a11260'},
+  delay : 400,
+  easing: 'sin.out',
+  scale: {0 : 1} ,
+  duration : 350,
+   backwardEasing: 'sin.in',
+  yoyo:  true,
+ 
+
+}).play();
+
+var shape4 = new mojs.Shape({
+  shape : 'polygon',
+  points:       4,
+  radius: 150,
+  fill: 'transparent',
+  strokeWidth:{11:2},
+  stroke:'#34495e',
+  easing : 'sin.out',
+  strokeDasharray: '100%',
+  strokeDashoffset: {'100%': '300%'},
+  delay : 800,
+  duration:1500,
+  repeat : 2000000
+
+}).play();
+
+var shape4 = new mojs.Shape({
+  shape : 'polygon',
+  points:       4,
+  radius: 130,
+  fill: 'transparent',
+  strokeWidth:{11:2},
+  stroke:'#34495e',
+  easing : 'sin.out',
+  strokeDasharray: '100%',
+  strokeDashoffset: {'100%': '300%'},
+  delay : 1050,
+  left:'50 %',
+  duration:1500,
+  repeat : 20000000
+
+}).play();
+
+var shape4 = new mojs.Shape({
+  shape : 'polygon',
+  points:       4,
+  radius: 110,
+  fill: 'transparent',
+  strokeWidth:{11:2},
+  stroke:'#34495e',
+  easing : 'sin.out',
+  strokeDasharray: '100%',
+  strokeDashoffset: {'100%': '300%'},
+  delay : 950,
+  duration:1500,
+  repeat : 2000000
+
+}).play();
+
+var shape4 = new mojs.Shape({
+  shape : 'polygon',
+  points:       4,
+  radius: 90,
+  fill: 'transparent',
+  strokeWidth:{11:2},
+  stroke:'#34495e',
+  easing : 'sin.out',
+  strokeDasharray: '100%',
+  strokeDashoffset: {'-100%': '-300%'},
+  delay : 850,
+  duration:1500,
+  repeat : 2000000
+
+}).play();
+
+var shape4 = new mojs.Shape({
+  shape : 'polygon',
+  points:       4,
+  radius: 70,
+  fill: 'transparent',
+  strokeWidth:{11:2},
+  stroke:'#34495e',
+  easing : 'sin.out',
+  strokeDasharray: '100%',
+  strokeDashoffset: {'-100%': '-300%'},
+  delay : 750,
+  duration:1500,
+  repeat : 200000
+
+}).play();
+
+new MojsPlayer({ add: timeline, isPlaying: true, isRepeat: true });
+const player = new MojsPlayer({ add: timeline, isPlaying: true, isRepeat: true });
+
+// Stop the animation after 2 seconds
+setTimeout(() => {
+  player.stop();
+}, 2000);
+
+  </script>
+
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: monospace;
+    }
+
+    .about{
+        position: relative;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #0e1623;
+        overflow: hidden;
+    }
+    section{
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+ 
+        background-color: #0e1623;
+        overflow: hidden;
+    }
+
+    section .text{
+        position: relative;
+        font-size: 5em;
+        text-align: center;
+        color: #00fe77;
+        -webkit-box-reflect: below -.46em linear-gradient(transparent,#0004);
+    }
+    section .text span{
+        position: relative;
+        display: inline-block;
+    }
+    p{
+        color: white;
+    }
+    
+    .about_img{
+        width:30%;
+        height: 100vh;
+        background-color:#0e1623 ;
+        background-image: url('standing.gif');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+
+
+<body>
+    <div class="about">
+    <section>
+        <h2 class="text">
+            Hi,I am Ayush Varshney!
+        </h2>
+        <br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius quisquam quae laboriosam mollitia, magnam exercitationem. Accusamus rerum explicabo, dolorem dolor doloribus est debitis vero, facilis aperiam reprehenderit, adipisci in id.</p>
+    </section>
+    <div class="about_img">
+        
+    </div>
+</div>
+    <script src="anime.min.js"></script>
+
+    <script>
+        const text=document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");
+
+        anime.timeline({
+            loop:true,
+        })
+        .add({
+            targets:'.text span',
+            translateY:[-600,0],
+            scale:[10,1],
+            opacity:[0,1],
+            easing:"easeOutExpo",
+            duration:2000,
+            delay:anime.stagger(10),
+        })
+        .add({
+            targets:'.text span',
+            translateX:[0,-1000],
+            scale:[1,1],
+            opacity:[1,0],
+            easing:"easeOutExpo",
+            duration:2000,
+            delay:anime.stagger(10),
+        })
+        .add({
+            targets:'.text span',
+            translateX:[1000,0],
+            scale:[1,1],
+            opacity:[0,1],
+            easing:"easeOutExpo",
+            duration:2000,
+            delay:anime.stagger(10),
+        })
+        // .add({
+        //     targets:'.text span',
+        //     translateX:[0,0],
+        //     scale:[1,20],
+        //     opacity:[1,0],
+        //     easing:"easeOutExpo",
+        //     duration:2000,
+        //     delay:anime.stagger(10),
+        // })
+        
+    </script>
+</body>
+</html>
